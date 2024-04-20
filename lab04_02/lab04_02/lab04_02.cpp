@@ -7,17 +7,16 @@ void quickSort(int* A, int first, int last);
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
+    setlocale(LC_CTYPE, "rus");
     int n, first_place = 0, second_place = 0, third_place = 0, result = 0;
-    int* A;
+    int* A{};
     do
     {
         cout << "Введите число участников: " << endl;
         cin >> n;
-        A = new int[n];
-        if (n < 1 || n > 10000)
+        if (n > 1 && n < 10000)
         {
-            delete[] A;
+            A = new int[n];
         }
     } while (n < 1 || n > 10000);
 
